@@ -15,15 +15,6 @@ html{
     touch-action: pan-down;
     }
 
-    body {
-        background-image: url('css/background.jpeg'); /* Replace 'your-image-url.jpg' with the URL or path of your image */
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    
-    
-    
-
 img{
     position: absolute;
     width: 40vw;
