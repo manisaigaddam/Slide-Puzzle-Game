@@ -1,0 +1,727 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    }
+
+html{
+    touch-action: pan-down;
+    }
+
+    body {
+        background-image: url('css/background.jpeg'); /* Replace 'your-image-url.jpg' with the URL or path of your image */
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    
+    
+
+img{
+    position: absolute;
+    width: 40vw;
+    border-radius: 3vw;
+    transition: all 250ms;
+}
+
+.image-top{
+    top: 20vw;
+    left: 15vw;
+    width: 70vw;
+    z-index: 1;
+}
+.image-left,
+.image-right{
+    top: 35vw;
+    left: 8vw;
+    width: 40vw;
+    z-index: 0;
+}
+.image-left{
+    left: 8vw;
+}
+.image-right{
+    left: 52vw;
+}
+
+#left_arrow,
+#right_arrow{
+    width: 10vw;
+    top: 50vw;
+    left: 15vw;
+    z-index: 2;
+}
+#left_arrow{
+    left: 15vw;
+}
+#right_arrow{
+    left: 75vw;
+}
+
+#main {
+    background: #333;
+    width: 100vw;
+    display: none;
+}
+
+.bloque {
+    border: 1px solid black;
+    position: absolute;
+    transition: all 500ms;
+}
+
+#btnNewGame,#btnHelp {
+    position: absolute;
+    left: 27vw;
+    border-radius: 5vw;
+    height: 15vw;
+    width: 45vw;
+    background: linear-gradient(30deg, gray, white);
+    color: darkblue;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 7vw;
+    box-shadow: 1px 1px 10px 3px whitesmoke;
+    outline: none;
+}
+
+#btnNewGame:hover,#btnHelp:hover {
+    box-shadow: 1px 1px 10px 5px whitesmoke;
+}
+
+#btnNewGame {
+    top: 135vw;
+}
+#btnHelp {
+    top: 155vw;
+    transition: all 500ms;
+    display: none;
+    }
+.puzzles,
+.puzzles-bottom,
+#level,
+#level_size_3,
+#level_size_4,
+#level_size_5,
+#level_size_6{
+    background: #FF9900;
+    color: darkblue;
+    position: absolute;
+    width: 20vw;
+    height: 10vw;
+    text-align: center;
+    line-height: 10vw;
+    top: 120vw;
+    border-radius: 5vw;
+    box-shadow: 1px 1px 10px 5px whitesmoke;
+    font-size: 8vw;
+}
+.puzzles,
+.puzzles-bottom{
+    width: 50vw;
+    left: 24vw;
+    transition: all 250ms;
+}
+.puzzles{
+    top: 4vw;
+}
+.puzzles-bottom{
+    top: 155vw;
+}
+
+#level{
+    width: 50vw;
+    top: 105vw;
+    left: 24vw;
+}
+#level_size_3{
+    left: 5vw;
+}
+#level_size_4{
+    background: gray;
+    left: 28vw;
+}
+#level_size_5{
+    background: gray;
+    left: 51vw;
+}
+#level_size_6{
+    background: gray;
+    left: 74vw;
+}
+
+/* 
+media queries
+*/
+@media (orientation:landscape){
+    
+    /* SweetAlert2 popup*/
+    div:last-child {
+        font-size: 1.5vw;
+    }
+
+    #main,
+    .bloque{
+        margin-top: 4vw;
+        margin-left: 4vw;
+    }
+
+
+    img{
+        position: absolute;
+        width: 10vw;
+        border-radius: 3vw;
+        transition: all 250ms;
+    }
+
+    .image-top{
+        top: 15vw;
+        left: 15vw;
+        width: 35vw;
+        z-index: 1;
+    }
+    .image-left,
+    .image-right{
+        top: 20vw;
+        left: 8vw;
+        width: 25vw;
+        z-index: 0;
+    }
+    .image-left{
+        left: 8vw;
+    }
+    .image-right{
+        left: 32vw;
+    }
+    #left_arrow,
+    #right_arrow{
+        width: 5vw;
+        top: 30vw;
+        left: 15vw;
+        z-index: 2;
+    }
+    #left_arrow{
+        left: 15vw;
+    }
+    #right_arrow{
+        left: 45vw;
+    }
+
+    #level,
+    #level_size_3,
+    #level_size_4,
+    #level_size_5,
+    #level_size_6{
+        font-size: 4vw;
+        width: 10vw;
+        height: 8vw;
+        line-height: 8vw;
+    }
+    
+    #level{
+        width: 20vw;
+        top: 4vw;
+        left: 72vw;
+    }
+
+    #level_size_3{
+        top: 15vw;
+        left: 70vw;
+    }
+    #level_size_4{
+        top: 15vw;
+        left: 85vw;
+    }
+    #level_size_5{
+        top: 25vw;
+        left: 70vw;
+    }
+    #level_size_6{
+        top: 25vw;
+        left: 85vw;
+    }
+
+    #puzzles{
+        transition: all 250ms;
+    }
+    .puzzles,
+    .puzzles-bottom{
+        top: 4vw;
+        left: 25vw;
+        width: 15vw;
+        height: 7vw;
+        font-size: 3vw;
+        line-height: 7vw;
+    }
+    .puzzles-bottom{
+        top: 45vw;
+        left: 75vw;
+    }
+    #btnNewGame,#btnHelp {
+        left: 73vw;
+        height: 8vw;
+        width: 20vw;
+        font-size: 3.2vw;
+    }
+
+    #btnNewGame {
+        top: 35vw;
+    }
+
+    #btnHelp {
+        top: 45vw;
+        }
+}
+
+@media (min-width:768px){
+
+    img{
+        position: absolute;
+        width: 50vw;
+        border-radius: 3vw;
+        transition: all 250ms;
+    }
+
+    .image-top{
+        top: 20vw;
+        left: 15vw;
+        width: 70vw;
+        z-index: 1;
+    }
+    .image-left,
+    .image-right{
+        top: 35vw;
+        left: 8vw;
+        width: 40vw;
+        z-index: 0;
+    }
+    .image-left{
+        left: 8vw;
+    }
+    .image-right{
+        left: 52vw;
+    }
+    #left_arrow,
+    #right-arrow{
+        width: 10vw;
+        top: 50vw;
+        left: 15vw;
+        z-index: 2;
+    }
+    #left_arrow{
+        left: 15vw;
+    }
+    #right_arrow{
+        left: 75vw;
+    }
+ 
+    #level,
+    #level_size_3,
+    #level_size_4,
+    #level_size_5,
+    #level_size_6{
+        font-size: 4vw;
+        line-height: 8vw;
+        width: 10vw;
+        height: 8vw;
+    }
+    
+#puzzles{
+    transition: all 250ms;
+}
+ 
+.puzzles-bottom{
+    top: 118vw;
+}
+    #level{
+        width: 20vw;
+        left: 42vw;
+    }
+
+    #level_size_3{
+        top: 105vw;
+        left: 27vw;
+    }
+    #level_size_4{
+        top: 105vw;
+        left: 40vw;
+    }
+    #level_size_5{
+        top: 105vw;
+        left: 53vw;
+    }
+    #level_size_6{
+        top: 105vw;
+        left: 66vw;
+    }
+
+    #level{
+        top: 105vw;
+        left: 3vw;
+    }
+
+    #btnNewGame,#btnHelp {
+        left: 79vw;
+        height: 8vw;
+        width: 20vw;
+        font-size: 3.2vw;
+    }
+
+    #btnNewGame {
+        top: 105vw;
+    }
+
+    #btnHelp {
+        top: 120vw;
+        }
+}
+
+@media (min-width:1024px){
+    .swal2-actions, .swal2-header{
+        font-size: 3vw;
+    }
+
+    #main,
+    .bloque{
+        margin-left: 5vw;
+    }
+
+    img{
+        position: absolute;
+        width: 50vw;
+        border-radius: 3vw;
+        transition: all 250ms;
+    }
+
+    .image-top{
+        top: 20vw;
+        left: 15vw;
+        width: 70vw;
+        z-index: 1;
+    }
+    .image-left,
+    .image-right{
+        top: 35vw;
+        left: 8vw;
+        width: 40vw;
+        z-index: 0;
+    }
+    .image-left{
+        left: 8vw;
+    }
+    .image-right{
+        left: 52vw;
+    }
+
+    #left_arrow,
+    #right_arrow{
+        width: 10vw;
+        top: 50vw;
+        z-index: 2;
+    }
+    #left_arrow{
+        left: 15vw;
+    }
+    #right_arrow{
+        left: 75vw;
+    }
+ 
+    #level,
+    #level_size_3,
+    #level_size_4,
+    #level_size_5,
+    #level_size_6{
+        font-size: 4vw;
+        line-height: 8vw;
+        width: 10vw;
+        height: 8vw;
+    }
+    
+#puzzles{
+    transition: all 250ms;
+}
+
+.puzzles-bottom{
+    top: 108vw;
+}
+    #level{
+        width: 20vw;
+        left: 42vw;
+    }
+
+    #level_size_3{
+        top: 95vw;
+        left: 27vw;
+    }
+    #level_size_4{
+        top: 95vw;
+        left: 40vw;
+    }
+    #level_size_5{
+        top: 95vw;
+        left: 53vw;
+    }
+    #level_size_6{
+        top: 95vw;
+        left: 66vw;
+    }
+
+    #level{
+        top: 95vw;
+        left: 3vw;
+    }
+
+    #btnNewGame,#btnHelp {
+        left: 79vw;
+        height: 8vw;
+        width: 20vw;
+        font-size: 3.2vw;
+    }
+
+    #btnNewGame {
+        top: 95vw;
+    }
+
+    #btnHelp {
+        top: 110vw;
+        }
+    }
+
+@media (min-width:1280px){
+.swal2-actions, .swal2-header{
+    font-size: 3vw;
+}
+
+#main{
+    background: #999;
+    margin-left: 5vw;
+    margin-top: 5vw;
+
+}
+
+.bloque{
+    margin-left: 5vw;
+    margin-top: 5vw;
+}
+
+img{
+    position: absolute;
+    width: 50vw;
+    border-radius: 3vw;
+    transition: all 250ms;
+}
+
+.image-top{
+    top: 20vw;
+    left: 15vw;
+    width: 40vw;
+    z-index: 1;
+}
+.image-left,
+.image-right{
+    top: 28vw;
+    left: 8vw;
+    width: 25vw;
+    z-index: 0;
+}
+.image-left{
+    left: 8vw;
+}
+.image-right{
+    left: 38vw;
+}
+
+#left_arrow,
+#right_arrow{
+    width: 6vw;
+    top: 38vw;
+    z-index: 2;
+}
+#left_arrow{
+    left: 15vw;
+}
+#right_arrow{
+    left: 49vw;
+}
+
+#level,
+#level_size_3,
+#level_size_4,
+#level_size_5,
+#level_size_6{
+    font-size: 4vw;
+    line-height: 8vw;
+    width: 10vw;
+    height: 8vw;
+}
+
+#puzzles{
+transition: all 250ms;
+}
+
+.puzzles-bottom{
+top: 58vw;
+}
+#level{
+    width: 20vw;
+    top: 5vw;
+    left: 73vw;
+}
+
+#level_size_3{
+    top: 20vw;
+    left: 70vw;
+}
+#level_size_4{
+    top: 20vw;
+    left: 85vw;
+}
+#level_size_5{
+    top: 32vw;
+    left: 70vw;
+}
+#level_size_6{
+    top: 32vw;
+    left: 85vw;
+}
+
+#btnNewGame,#btnHelp {
+    left: 73vw;
+    height: 8vw;
+    width: 20vw;
+    font-size: 3.2vw;
+}
+
+#btnNewGame {
+    top: 45vw;
+}
+
+#btnHelp {
+    top: 58vw;
+    }
+}
+    
+@media (min-width:1360px){
+    .swal2-actions, .swal2-header{
+        font-size: 1vw;
+    }
+
+    #main,
+    .bloque{
+        margin: 5vw;
+    }
+
+    img{
+        position: absolute;
+        width: 50vw;
+        border-radius: 3vw;
+        transition: all 250ms;
+    }
+
+   .image-top{
+        top: 10vw;   
+        left: 10vw;  
+        width: 30vw; 
+        z-index: 1;
+    }
+    .image-left,
+    .image-right{
+        top: 15vw;
+        width: 20vw;
+        z-index: 0;
+    }
+    .image-left{
+        left: 4vw;
+    }
+    .image-right{
+        left: 25vw;
+    }
+
+    #left_arrow,
+    #right_arrow{
+        width: 5vw;
+        top: 23vw;
+        z-index: 2;
+    }
+    #left_arrow{
+        left: 10vw;
+    }
+    #right_arrow{
+        left: 35vw;
+    }
+ 
+    #level,
+    #level_size_3,
+    #level_size_4,
+    #level_size_5,
+    #level_size_6{
+        font-size: 4vw;
+        line-height: 8vw;
+        width: 10vw;
+        height: 8vw;
+        transition: all 250ms;
+    }
+    
+    #level{
+        width: 20vw;
+        left: 62vw;
+        height: 5vw;
+        font-size: 3vw;
+        top: 2vw;
+        line-height: 5vw;
+    }
+    #level_size_3{
+        top: 10vw;
+        left: 48vw;
+    }
+    #level_size_4{
+        top: 10vw;
+        left: 61vw;
+    }
+    #level_size_5{
+        top: 10vw;
+        left: 74vw;
+    }
+    #level_size_6{
+        top: 10vw;
+        left: 87vw;
+    }
+
+    .puzzles,
+    .puzzles-bottom{
+        width: 20vw;
+        height: 5vw;
+        font-size: 3vw;
+        top: 2vw;
+        left: 15vw;
+        line-height: 5vw;
+    }
+
+    .puzzles-bottom{
+        top: 35vw;
+        left: 62vw;
+    }
+
+    #btnNewGame,#btnHelp {
+        left: 62vw;
+        height: 8vw;
+        width: 20vw;
+        font-size: 3.2vw;
+    }
+
+    #btnNewGame {
+        top: 25vw;
+    }
+
+    #btnHelp {
+        top: 35vw;
+        }
+    }
+    

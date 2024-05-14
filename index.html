@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="Description" content="slide puzzle">
+    <meta name="theme-color" content="#514757"/>
+    <link rel="apple-touch-icon" href="css/images/icons/icon-512x512.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <title>Puzzle</title>
+</head>
+
+<body>
+    <noscript>
+        <h1>Javascript esta deshabilitado</h1>
+    </noscript>
+    <main id="main"></main>
+    <img id="left_arrow" alt="left_arrow"   src="css/images/left_arrow.png">
+    <img id="right_arrow" alt="right_arrow" src="css/images/right_arrow.png">
+    <img id="image1" alt="image1" class="image-top" src="css/images/dog.jpg">
+    <img id="image2" alt="image2" class="image-left" src="css/images/tigre.jpeg">
+    <img id="image3" alt="image3" class="image-right" src="css/images/tucan.jpeg">
+    <div id="puzzles" class="no-select puzzles">PUZZLES</div>
+    <div id="level" class="no-select">LEVELS</div>
+    <div id="level_size_3" class="no-select">3X3</div>
+    <div id="level_size_4" class="no-select">4X4</div>
+    <div id="level_size_5" class="no-select">5X5</div>
+    <div id="level_size_6" class="no-select">6X6</div>
+    <button id="btnNewGame" class="no-select">start game</button>
+    <button id="btnHelp" class="no-select">help</button>
+</body>
+
+<script src="js/main.js"></script>
+<script src="sw.js"></script>
+<script src="js/control.js"></script>
+<script src="js/blocks.js"></script>
+<script src="js/scramble.js"></script>
+
+</html>
